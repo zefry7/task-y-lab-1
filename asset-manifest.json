@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/task-y-lab-1/static/css/main.2212b6bb.css",
+    "main.js": "/task-y-lab-1/static/js/main.563eb570.js",
+    "index.html": "/task-y-lab-1/index.html",
+    "main.2212b6bb.css.map": "/task-y-lab-1/static/css/main.2212b6bb.css.map",
+    "main.563eb570.js.map": "/task-y-lab-1/static/js/main.563eb570.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2212b6bb.css",
+    "static/js/main.563eb570.js"
+  ]
+}
