@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+:root {
+    --color-1: rgb(139, 53, 165);
+    --color-2: white;
+    --color-3: rgba(152, 94, 170, 0.562);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    position: relative;
+}
+
+.auth {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform linear 0.3s;
+    &_rotate {
+        transform: rotateY(180deg);
+    }
+    &__content {
+        border: 2px solid var(--color-1);
+        background-color: var(--color-3);
+        width: 400px;
+        height: 300px;
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        animation: scale-to-0-from-1 ease-out 0.5s, opacity-to-0-from-1 ease-out 0.5s;
+    }
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 100%;
+        color: var(--color-2);
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+        input {
+            height: 36px;
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 7px;
+            border: 1px solid var(--color-1);
+        }
+    }
+    &__error {
+        font-size: 18px;
+        animation: opacity-to-0-from-1 linear 0.3s;
+        color: red;
+    }
+
+    &__submit {
+        margin-top: auto;
+        height: 40px;
+        width: 100%;
+        border: 2px solid var(--color-1);
+        background-color: var(--color-1);
+        color: var(--color-2);
+        border-radius: 7px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all linear 0.15s;
+        &:hover {
+            background-color: white;
+            border-color: var(--color-1);
+            color: var(--color-1);
+        }
+        &:active {
+            transform: translateY(3px);
+        }
+    }
+
+    &__complete {
+        text-align: center;
+        font-size: 30px;
+        color: var(--color-2);
+        transform: rotateY(180deg);
+    }
+}
+
+.description {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    opacity: 0;
+    animation: opacity-to-0-from-1 1s linear 0.5s forwards;
+}
+
+@keyframes opacity-to-0-from-1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-to-0-from-1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
